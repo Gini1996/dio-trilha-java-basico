@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -22,6 +23,12 @@ public class AboutMe
             System.out.println( "Ola, me chamo ".concat(nome).concat(" ").concat(sobrenome) );
             System.out.println( "\nTenho " + idade + " anos. " );
             System.out.println( "\nMinha altura é " + altura + " cm." );
+
+            scanner.close();
+        }
+        catch (InputMismatchException e) 
+        {
+            System.out.println("Os campos idade e altura precisam ser numéricos");
         }
     }
 }
